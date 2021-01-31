@@ -1,0 +1,24 @@
+{
+  "name": "docsify-jx-toc",
+  "version": "1.0.0",
+  "description": "Docsify Table of Contents & Go Top",
+  "main": "jx-toc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasperxu/docsify-jx-toc.git"
+  },
+  "keywords": [
+    "docsify",
+    "toc",
+    "gotop"
+  ],
+  "author": "JasperXu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jasperxu/docsify-jx-toc/issues"
+  },
+  "homepage": "https://github.com/jasperxu/docsify-jx-toc#readme"
+}

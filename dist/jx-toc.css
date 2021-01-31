@@ -1,0 +1,82 @@
+/* 目录样式 */
+#jx-toc {
+  background-color: var(--sidebar-background, #fafafa);
+  border: 1px solid var(--sidebar-border-color, rgba(0, 0, 0, 0.07));
+  border-radius: 1px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  background-clip: padding-box;
+  padding: 5px 10px;
+  position: fixed;
+  right: 50px;
+  top: 68px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 999;
+  cursor: pointer;
+  text-align: right;
+  max-height: 70%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  color: var(--sidebar-nav-link-color--hover, var(--sidebar-nav-link-color), #364149);
+}
+#jx-toc::-webkit-scrollbar {
+  width: 4px;
+}
+#jx-toc::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 4px;
+}
+#jx-toc:hover::-webkit-scrollbar-thumb {
+  background: hsla(0, 0%, 53.3%, 0.4);
+}
+#jx-toc:hover::-webkit-scrollbar-track {
+  background: hsla(0, 0%, 53.3%, 0.1);
+}
+#jx-toc ul {
+  display: none;
+  text-align: left;
+  padding-right: 10px;
+  padding-left: 10px;
+  list-style-type: none;
+}
+#jx-toc:hover ul {
+  display: block;
+}
+#jx-toc ul li a {
+  text-decoration: none;
+  border-bottom: none;
+  font-size: 14px;
+  color: var(--sidebar-nav-link-color, #364149);
+  background: 0 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+#jx-toc ul li a:hover {
+  text-decoration: underline;
+}
+/* 目前没有处理自动标识，所以先注释起来了 */
+/* #jx-toc .active {
+  border-left: 5px solid;
+  color: var(--theme-color, #42b983);
+  padding-left: 10px;
+} */
+/* 回到顶部样式 */
+#jx-gotop {
+  position: fixed;
+  right: 50px;
+  bottom: 68px;
+  background-color: var(--sidebar-background, #fafafa);
+  border: 1px solid var(--sidebar-border-color, rgba(0, 0, 0, 0.07));
+  border-radius: 1px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  background-clip: padding-box;
+  z-index: 999;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 5px 10px;
+  color: var(--sidebar-nav-link-color--hover, var(--sidebar-nav-link-color));
+}
