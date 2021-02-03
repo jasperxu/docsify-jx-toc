@@ -1,5 +1,5 @@
 var defaultOptions = {
-  headings: 'h1, h2, h3'
+  headings: 'h1, h2, h3',
 }
 
 var aTag = function(src) {
@@ -114,16 +114,17 @@ function plugin(hook, vm) {
   var userOptions = vm.config.jxtoc;
 
   hook.mounted(function () {
+    var mainElm = document.querySelector("main");
     var content = window.Docsify.dom.find(".content");
     if (content) {
       var jxtoc = window.Docsify.dom.create("div", "");
       jxtoc.id = "jx-toc"
-      window.Docsify.dom.before(content, jxtoc);
+      window.Docsify.dom.before(mainElm, jxtoc);
 
       var jxGoTop = window.Docsify.dom.create("span", "<i class='fas fa-arrow-up'></i>");
-      jxGoTop.id = "jx-gotop";
+      jxGoTop.id = "jx-toc-gotop";
       jxGoTop.onclick = goTopFunction;
-      window.Docsify.dom.before(content, jxGoTop);
+      window.Docsify.dom.before(mainElm, jxGoTop);
     }
   });
 
@@ -135,16 +136,16 @@ function plugin(hook, vm) {
     }
     jxtoc.innerHTML = null
 
+    var TocAnchor = document.createElement('i');
+    TocAnchor.setAttribute('class', 'fas fa-list');
+		jxtoc.appendChild(TocAnchor);
+
   	const toc = buildTOC(userOptions);
 
     if (!toc.innerHTML) {
       return;
     }
 
-		var TocAnchor = document.createElement('i');
-    TocAnchor.setAttribute('class', 'fas fa-list');
-
-		jxtoc.appendChild(TocAnchor);
     jxtoc.appendChild(toc);
   });
 }

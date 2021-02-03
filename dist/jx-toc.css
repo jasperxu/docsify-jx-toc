@@ -10,7 +10,7 @@
   position: fixed;
   right: 50px;
   top: 68px;
-  font-size: 12px;
+  font-size: 14px;
   white-space: nowrap;
   z-index: 999;
   cursor: pointer;
@@ -64,7 +64,7 @@
   padding-left: 10px;
 } */
 /* 回到顶部样式 */
-#jx-gotop {
+#jx-toc-gotop {
   position: fixed;
   right: 50px;
   bottom: 68px;
@@ -76,7 +76,41 @@
   background-clip: padding-box;
   z-index: 999;
   cursor: pointer;
-  font-size: 12px;
+  font-size: 14px;
   padding: 5px 10px;
   color: var(--sidebar-nav-link-color--hover, var(--sidebar-nav-link-color));
+}
+
+#jx-sun {
+  position: fixed;
+  right: 68px;
+  bottom: 24px;
+  background-color: white;
+  border: 1px solid var(--sidebar-border-color, rgba(0, 0, 0, 0.07));
+  border-radius: 1px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  background-clip: padding-box;
+  z-index: 999;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 5px 10px;
+  color: black;
+}
+
+#jx-moon {
+  position: fixed;
+  right: 32px;
+  bottom: 24px;
+  background-color: black;
+  border: 1px solid var(--sidebar-border-color, rgba(0, 0, 0, 0.07));
+  border-radius: 1px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  background-clip: padding-box;
+  z-index: 999;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 5px 10px;
+  color: white;
 }
