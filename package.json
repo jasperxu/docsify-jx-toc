@@ -1,6 +1,6 @@
 {
   "name": "docsify-jx-toc",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Docsify Table of Contents & Go Top",
   "main": "jx-toc.js",
   "scripts": {
